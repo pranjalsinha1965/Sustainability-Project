@@ -1,0 +1,71 @@
+/* Custom styles for vibrant layout and flexbox layout */
+/* Body background color */
+body {
+  background-color: #f0f8ff; /* Light blue background */
+  font-family: "Arial", sans-serif;
+}
+
+/* Card Image Style */
+.card-img {
+  object-fit: cover;
+  height: 250px; /* Adjust height for better visuals */
+}
+
+/* Card shadow effect */
+.card {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+/* Gradient background for the hero section */
+.bg-gradient {
+  background: linear-gradient(45deg, #ff7e5f, #feb47b);
+  color: white;
+}
+
+/* Custom button styling */
+.btn-primary {
+  background-color: #ff7e5f;
+  border-color: #feb47b;
+}
+
+/* Spacing and margins */
+.row.g-4 {
+  margin-top: 30px;
+}
+
+.card-body {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+/* Contact Form styling */
+form .form-control {
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+/* Adjust text-center margins */
+.text-center {
+  margin-top: 20px;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border-color: #218838;
+}
+
+/* Shadow for buttons */
+.btn-lg {
+  padding: 12px 25px;
+}
+
+/*# sourceMappingURL=styles.scss.map */
