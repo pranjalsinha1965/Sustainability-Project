@@ -1,0 +1,50 @@
+{% extends "core/base.html" %}
+
+{% block title %}Add Division Details{% endblock %}
+
+{% block content %}
+    <div class="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold text-teal-600 mb-4">Add Division Details</h2>
+
+        <form method="POST" action="{% url 'add_division_detail' %}" class="space-y-4">
+            {% csrf_token %}
+            
+            <!-- Division Name -->
+            <label for="division_name" class="block font-medium">Division Name</label>
+            <input type="text" id="division_name" name="division_name" class="w-full p-2 border rounded" required>
+
+            <!-- DRM Name -->
+            <label for="drm_name" class="block font-medium">DRM Name</label>
+            <input type="text" id="drm_name" name="drm_name" class="w-full p-2 border rounded" required>
+
+            <!-- Zone Name -->
+            <label for="zone_name" class="block font-medium">Zone Name</label>
+            <input type="text" id="zone_name" name="zone_name" class="w-full p-2 border rounded" required>
+
+            <!-- Zone Code -->
+            <label for="zone_code" class="block font-medium">Zone Code</label>
+            <input type="text" id="zone_code" name="zone_code" class="w-full p-2 border rounded" required>
+
+            <!-- No. of Divisions -->
+            <label for="no_of_divisions" class="block font-medium">No. of Divisions</label>
+            <input type="number" id="no_of_divisions" name="no_of_divisions" class="w-full p-2 border rounded" required>
+
+            <!-- No. of Stations -->
+            <label for="no_of_stations" class="block font-medium">No. of Stations</label>
+            <input type="number" id="no_of_stations" name="no_of_stations" class="w-full p-2 border rounded" required>
+
+            <!-- Headquarters -->
+            <label for="headquarters" class="block font-medium">Headquarters</label>
+            <input type="text" id="headquarters" name="headquarters" class="w-full p-2 border rounded" required>
+
+            <!-- Address -->
+            <label for="address" class="block font-medium">Address</label>
+            <textarea id="address" name="address" rows="3" class="w-full p-2 border rounded" required></textarea>
+
+            <!-- Submit Button -->
+            <button type="submit" class="w-full p-2 bg-teal-500 text-white rounded hover:bg-teal-700">
+                Save
+            </button>
+        </form>
+    </div>
+{% endblock %}

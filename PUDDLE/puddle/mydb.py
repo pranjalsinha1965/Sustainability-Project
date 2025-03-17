@@ -1,0 +1,23 @@
+# Install Mysql on your computer
+# https://dev.mysql.com/downloads/installer/
+# pip install mysql
+# pip install mysql-connector
+# pip install mysql-connector-python 
+# from __future__ import annotations
+import mysql.connector
+
+
+dataBase = mysql.connector.connect(
+	host = 'localhost',
+	user = 'root',
+	passwd = 'jV>:389`orW.'
+
+	)
+
+# prepare a cursor object
+cursorObject = dataBase.cursor()
+
+# Create a database
+cursorObject.execute("CREATE DATABASE greecustainability")
+
+print("All Done!")

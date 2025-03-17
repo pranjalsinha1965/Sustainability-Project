@@ -9,9 +9,9 @@
             "server": "localhost",
             "port": 3306,
             "driver": "MySQL",
-            "database": "elderco",
+            "database": "greecsustainability",
             "username": "root",
-            "name": "Django-CRM-Database",
+            "name": "Django-Puddle",
             "askForPassword": true
         }
     ]

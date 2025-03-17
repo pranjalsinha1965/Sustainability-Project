@@ -1,0 +1,64 @@
+<!-- SDA Punjab: Name, Designation, Email, Responsibilities
+SDA Haryana: State, Name of officer, Designation, Headquarter, Email-ID, EPBX No.
+Govt. Buildings: Department, Address, Email, Contact, Website
+Division-details (Sheet5): Division Name, DRM Name, Zone Name, Zone Code, No of Division, No of Stations, Headquarters, Address
+Railways-Details (Sheet4): Zone, Division name, name, city,  -->
+
+{% extends "core/base.html" %}
+
+{% block title %}Add SDA Haryana{% endblock %}
+
+{% block content %}
+    <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md">
+        <h2 class="text-3xl font-semibold text-teal-600 mb-6">Add SDA Haryana Details</h2>
+
+        <form method="POST" action="{% url 'add_sda_haryana' %}" class="space-y-6">
+            {% csrf_token %}
+            
+            <div class="space-y-4">
+                <!-- State Field -->
+                <div>
+                    <label for="state" class="block text-lg font-medium text-gray-700">State</label>
+                    <input type="text" id="state" name="state" value="Haryana" class="w-full p-3 border border-gray-300 rounded-lg bg-gray-100" readonly>
+                </div>
+
+                <!-- Name of Officer Field -->
+                <div>
+                    <label for="name" class="block text-lg font-medium text-gray-700">Name of Officer</label>
+                    <input type="text" id="name" name="name" class="w-full p-3 border border-gray-300 rounded-lg" required>
+                </div>
+
+                <!-- Designation Field -->
+                <div>
+                    <label for="designation" class="block text-lg font-medium text-gray-700">Designation</label>
+                    <input type="text" id="designation" name="designation" class="w-full p-3 border border-gray-300 rounded-lg" required>
+                </div>
+
+                <!-- Headquarter Field -->
+                <div>
+                    <label for="headquarter" class="block text-lg font-medium text-gray-700">Headquarter</label>
+                    <input type="text" id="headquarter" name="headquarter" class="w-full p-3 border border-gray-300 rounded-lg" required>
+                </div>
+
+                <!-- Email-ID Field -->
+                <div>
+                    <label for="email" class="block text-lg font-medium text-gray-700">Email-ID</label>
+                    <input type="email" id="email" name="email" class="w-full p-3 border border-gray-300 rounded-lg" required>
+                </div>
+
+                <!-- EPBX No. Field -->
+                <div>
+                    <label for="epbx" class="block text-lg font-medium text-gray-700">EPBX No.</label>
+                    <input type="text" id="epbx" name="epbx" class="w-full p-3 border border-gray-300 rounded-lg">
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="flex justify-between items-center">
+                <button type="submit" class="px-6 py-3 bg-teal-500 text-white text-lg font-semibold rounded-lg hover:bg-teal-700">
+                    Save
+                </button>
+            </div>
+        </form>
+    </div>
+{% endblock %}

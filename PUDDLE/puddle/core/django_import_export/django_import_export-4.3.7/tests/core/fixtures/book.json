@@ -1,0 +1,44 @@
+[
+    {
+        "model": "core.book",
+        "pk": 11,
+        "fields": {
+            "name": "A Game of Thrones",
+            "author": 11,
+            "author_email": "martin@got.com",
+            "imported": false,
+            "published": "1996-08-01",
+            "published_time": "21:00",
+            "price": 25.0,
+            "categories": [1]
+        }
+    },
+    {
+        "model": "core.book",
+        "pk": 5,
+        "fields": {
+            "name": "The Man with the Golden Gun",
+            "author": 5,
+            "author_email": "ian@example.com",
+            "imported": false,
+            "published": "1965-04-01",
+            "published_time": "21:00",
+            "price": 5.0,
+            "categories": [2]
+        }
+    },
+    {
+        "model": "core.book",
+        "pk": 6,
+        "fields": {
+            "name": "Circles",
+            "author": 11,
+            "author_email": "geo@met.ry",
+            "imported": false,
+            "published": "2020-08-01",
+            "published_time": "21:00",
+            "price": 15.0,
+            "categories": [2]
+        }
+    }
+]

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SDA Haryana List</title>
+</head>
+<body>
+    <h1>SDA Haryana Records</h1>
+    <table border="1">
+        <tr>
+            <th>State</th>
+            <th>Name of Officer</th>
+            <th>Designation</th>
+            <th>Office Tel. No.</th>
+            <th>Email ID</th>
+            <th>EPBX No.</th>
+        </tr>
+        {% for entry in sda_haryana_data %}
+        <tr>
+            <td>{{ entry.state }}</td>
+            <td>{{ entry.name }}</td>
+            <td>{{ entry.designation }}</td>
+            <td>{{ entry.office_tel }}</td>
+            <td>{{ entry.email }}</td>
+            <td>{{ entry.epbx_no }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {},
+            }
+        }
+    </script>
+    <title>Carbon Footprints | {% block title %}{% endblock %}</title>
+    <style>
+        .scroll-container {
+            overflow-x: auto;
+            overflow-y: auto;
+            white-space: nowrap;
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 1rem;
+            max-height: 400px;
+            padding: 1rem;
+            scroll-snap-type: x mandatory;
+        }
+
+        .scroll-container::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+        }
+
+        .scroll-container::-webkit-scrollbar-thumb {
+            background: teal;
+            border-radius: 5px;
+        }
+
+        .scroll-container::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-100 to-gray-300 min-h-screen flex flex-col">
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 bg-white shadow-md z-50 py-6 px-6 flex justify-between items-center">
+        <a href="/" class="text-2xl font-bold text-teal-600">Sustainability Project</a>
+
+        <div class="space-x-6 flex items-center">
+            <button onclick="toggleModal('newItemModal')" class="text-lg font-semibold text-teal-600 hover:text-teal-700">New Item</button>
+            <a href="#" class="text-lg font-semibold text-teal-600 hover:text-teal-700">Browse</a>
+
+            <!-- Check if user is authenticated -->
+            {% if request.user.is_authenticated %}
+                <p class="text-sm text-gray-600">Welcome, {{ request.user.username }}</p>
+                <a href=# class="px-6 py-3 text-lg font-semibold bg-teal-500 text-white rounded-xl hover:bg-teal-700">Inbox</a>
+                <a href=# class="px-6 py-3 text-lg font-semibold bg-gray-500 text-white rounded-xl hover:bg-gray-700">Dashboard</a>
+            {% else %}
+                <a href="{% url 'core:signup' %}" class="px-6 py-3 text-lg font-semibold bg-teal-500 text-white rounded-xl hover:bg-teal-700">Sign up</a>
+                <a href="{% url 'core:login' %}" class="px-6 py-3 text-lg font-semibold bg-gray-500 text-white rounded-xl hover:bg-gray-700">Log in</a>
+            {% endif %}
+        </div>
+    </nav>
+    <!-- Main Content -->
+    <div class="max-w-6xl mx-auto px-6 py-6 flex flex-col space-y-6">
+        {% block content %} {% endblock %}
+        <div class="scroll-container bg-white p-4 shadow-md rounded-lg flex space-x-4">
+            <div class="w-64 h-64 bg-teal-500 flex flex-col items-center justify-center text-white text-xl font-bold rounded-lg">
+                S.D.A. Punjab
+                <button class="mt-2 px-4 py-2 bg-white text-teal-600 rounded-lg" onclick="location.href='/add-sda-punjab'">Add Details</button>
+                <button class="mt-2 px-4 py-2 bg-gray-200 text-teal-600 rounded-lg" onclick="location.href='/sda-punjab-list'">View List</button>
+            </div>
+            <div class="w-64 h-64 bg-blue-500 flex flex-col items-center justify-center text-white text-xl font-bold rounded-lg">
+                S.D.A. Haryana
+                <button class="mt-2 px-4 py-2 bg-white text-blue-600 rounded-lg" onclick="location.href='/add-sda-haryana'">Add Details</button>
+                <button class="mt-2 px-4 py-2 bg-gray-200 text-blue-600 rounded-lg" onclick="location.href='/sda-haryana-list'">View List</button>
+            </div>
+            <div class="w-64 h-64 bg-red-500 flex flex-col items-center justify-center text-white text-xl font-bold rounded-lg">
+                Gov. Buildings
+                <button class="mt-2 px-4 py-2 bg-white text-red-600 rounded-lg" onclick="location.href='/add-govt-building'">Add Details</button>
+                <button class="mt-2 px-4 py-2 bg-gray-200 text-red-600 rounded-lg" onclick="location.href='/govt-building-list'">View List</button>
+            </div>
+            <div class="w-64 h-64 bg-green-500 flex flex-col items-center justify-center text-white text-xl font-bold rounded-lg">
+                Division Details
+                <button class="mt-2 px-4 py-2 bg-white text-green-600 rounded-lg" onclick="location.href='/add-division-detail'">Add Details</button>
+                <button class="mt-2 px-4 py-2 bg-gray-200 text-green-600 rounded-lg" onclick="location.href='/division-detail-list'">View List</button>
+            </div>
+            <div class="w-64 h-64 bg-cyan-500 flex flex-col items-center justify-center text-white text-xl font-bold rounded-lg">
+                Railways Details
+                <button class="mt-2 px-4 py-2 bg-white text-cyan-600 rounded-lg" onclick="location.href='/add-railway-detail'">Add Details</button>
+                <button class="mt-2 px-4 py-2 bg-gray-200 text-cyan-600 rounded-lg" onclick="location.href='/railway-detail-list'">View List</button>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="mt-6 p-6 text-center bg-teal-500 text-white">
+        <ul>
+            <li><a href="{% url 'core:contact' %}" class="hover:text-gray-300">Contact</a></li>
+        </ul>
+        <p>&copy; 2025 Puddle. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function toggleModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>

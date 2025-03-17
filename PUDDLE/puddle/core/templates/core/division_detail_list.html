@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Division Details List</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Division Details</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Division Name</th>
+                <th>DRM Name</th>
+                <th>Zone Name</th>
+                <th>Zone Code</th>
+                <th>No. of Divisions</th>
+                <th>No. of Stations</th>
+                <th>Headquarters</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in division_detail_data %}
+            <tr>
+                <td>{{ entry.division_name }}</td>
+                <td>{{ entry.drm_name }}</td>
+                <td>{{ entry.zone_name }}</td>
+                <td>{{ entry.zone_code }}</td>
+                <td>{{ entry.no_of_divisions }}</td>
+                <td>{{ entry.no_of_stations }}</td>
+                <td>{{ entry.headquarters }}</td>
+                <td>{{ entry.address }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="8" style="text-align: center;">No records found</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

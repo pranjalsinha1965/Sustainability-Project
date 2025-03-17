@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Railway Division Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        h2 {
+            color: #008080;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #008080;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Railway Division Details</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Zone</th>
+                <th>Division Name</th>
+                <th>Officer Name</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in railway_detail_data %}
+                <tr>
+                    <td>{{ entry.zone }}</td>
+                    <td>{{ entry.division_name }}</td>
+                    <td>{{ entry.officer_name }}</td>
+                    <td>{{ entry.city }}</td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="4" style="text-align:center;">No records found.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>

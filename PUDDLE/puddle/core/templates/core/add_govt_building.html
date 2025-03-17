@@ -1,0 +1,38 @@
+{% extends "core/base.html" %}
+
+{% block title %}Add Government Building{% endblock %}
+
+{% block content %}
+    <div class="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">Add Government Building</h2>
+
+        <form method="POST" action="{% url 'add_govt_building' %}" class="space-y-4">
+            {% csrf_token %}
+            
+            <!-- Department Name -->
+            <label for="department" class="block font-medium">Department Name</label>
+            <input type="text" id="department" name="department" class="w-full p-2 border rounded" required>
+
+            <!-- Address -->
+            <label for="address" class="block font-medium">Address</label>
+            <textarea id="address" name="address" rows="3" class="w-full p-2 border rounded" required></textarea>
+
+            <!-- Email -->
+            <label for="email" class="block font-medium">Email</label>
+            <input type="email" id="email" name="email" class="w-full p-2 border rounded" required>
+
+            <!-- Contact -->
+            <label for="contact" class="block font-medium">Contact</label>
+            <input type="text" id="contact" name="contact" class="w-full p-2 border rounded" required>
+
+            <!-- Website -->
+            <label for="website" class="block font-medium">Website</label>
+            <input type="url" id="website" name="website" class="w-full p-2 border rounded">
+
+            <!-- Submit Button -->
+            <button type="submit" class="w-full p-2 bg-blue-500 text-white rounded hover:bg-blue-700">
+                Save
+            </button>
+        </form>
+    </div>
+{% endblock %}
