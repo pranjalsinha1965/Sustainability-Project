@@ -61,7 +61,7 @@ Contributions are welcome! Please feel free to fork this project and submit pull
 
 2. Commit your changes:
     ```bash
-git commit -m "Added feature"
+    git commit -m "Added feature"
 
 3. Push to your branch:
     ```bash
