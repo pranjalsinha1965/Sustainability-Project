@@ -113,6 +113,10 @@ def railway_detail_list(request):
     railway_detail_data = RailwayDetail.objects.all()  # Fetch all data from the RailwayDetail model
     return render(request, 'core/railway_detail_list.html', {'railway_detail_data': railway_detail_data})
 
+def cards_view(request):
+    return render(request, 'core/cards.html')
+
+
 def upload_file(request):
     if request.method == 'POST':
         form = UploadFileForm(request.POST, request.FILES)
