@@ -1,0 +1,1 @@
+mongodb-windows-x86_64-8.0.4-signed.msi filter=lfs diff=lfs merge=lfs -text
