@@ -83,6 +83,7 @@ For more information or to get in touch, please reach out to:
 1. Thanks to all the contributors who have helped to make this project better.
 2. Inspired by various sustainability efforts around the globe.
 
-## 🎥 Video Explanation  
-Watch the video demonstration of this project here:  
-[![Watch the Video](https://img.shields.io/badge/Watch%20Video-Click%20Here-blue?style=for-the-badge)](https://drive.google.com/file/d/1XguBanmIuZhfD6ox1O96b3Lg-rDAg4L4/view?usp=sharing)
+## 📽️ Video Demonstration  
+For a better understanding, watch the complete explanation here:  
+🔗 [Click to Watch](https://drive.google.com/file/d/1XguBanmIuZhfD6ox1O96b3Lg-rDAg4L4/view?usp=sharing)
+
