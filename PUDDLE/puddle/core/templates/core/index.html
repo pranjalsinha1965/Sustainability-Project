@@ -2,6 +2,39 @@
 {% block title %} Welcome {% endblock %}
 {% block content %}
 <div class="max-w-6xl mx-auto px-6 py-6 flex flex-col space-y-6">
-    <h2 class="text-3xl font-semibold text-gray-800 mb-4">Target Segments</h2>
+    
+    <!-- Page Heading -->
+    <h2 class="text-4xl font-extrabold text-blue-900 mb-6 underline">Target Segments</h2>
+
+    <!-- SDA Punjab -->
+    <div class="bg-gray-100 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+        <h3 class="text-2xl font-semibold text-gray-700">SDA Punjab</h3>
+        <p class="text-lg text-gray-600">Details and projects related to sustainable development initiatives in Punjab.</p>
     </div>
-{% endblock %} 
+
+    <!-- SDA Haryana -->
+    <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-blue-500 hover:scale-105 transform transition-transform duration-300">
+        <h3 class="text-2xl font-semibold text-gray-700">SDA Haryana</h3>
+        <p class="text-lg text-gray-600">Overview of sustainable initiatives and policies in Haryana.</p>
+    </div>
+
+    <!-- Govt Buildings -->
+    <div class="bg-gray-200 p-6 rounded-xl shadow-md hover:bg-gray-300 transition-all duration-300">
+        <h3 class="text-2xl font-semibold text-gray-700">Government Buildings</h3>
+        <p class="text-lg text-gray-600">Implementation of sustainability practices in government infrastructure.</p>
+    </div>
+
+    <!-- Division Details -->
+    <div class="bg-blue-100 p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+        <h3 class="text-2xl font-semibold text-blue-700">Division Details</h3>
+        <p class="text-lg text-gray-600">Information about various divisions and their roles in sustainable development.</p>
+    </div>
+
+    <!-- Railways Details -->
+    <div class="bg-green-100 p-6 rounded-xl shadow-md hover:bg-green-200 transition-all duration-300">
+        <h3 class="text-2xl font-semibold text-green-700">Railways Details</h3>
+        <p class="text-lg text-gray-600">Sustainability initiatives in railway infrastructure and operations.</p>
+    </div>
+
+</div>
+{% endblock %}

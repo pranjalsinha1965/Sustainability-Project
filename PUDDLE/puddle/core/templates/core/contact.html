@@ -2,6 +2,28 @@
 {% block title %} Contact Page {% endblock %}
 {% block content %}
 <div class="max-w-6xl mx-auto px-6 py-6 flex flex-col space-y-6">
-<h2 class="text-3xl font-semibold text-gray-800 mb-4">Contact Segments</h2>
+
+    <!-- Page Heading -->
+    <h2 class="text-4xl font-extrabold text-blue-900 mb-6 underline">Contact Segments</h2>
+
+    <!-- Personal Details -->
+    <div class="bg-gray-100 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+        <h3 class="text-2xl font-semibold text-gray-700">Ron (Pranjal Sinha)</h3>
+        <p class="text-lg text-gray-600">DevOps | MLOps | Competitive Coding | Cybersecurity</p>
+        <p class="text-lg text-gray-600">📍 Pune, India</p>
+        <p class="text-lg text-gray-600">📧 Email: <a href="mailto:pranjalsinha1965@gmail.com" class="text-blue-500 hover:underline">pranjalsinha1965@gmail.com</a></p>
+        <p class="text-lg text-gray-600">📞 Contact: <a href="tel:+919871523579" class="text-blue-500 hover:underline">+91 9871523579</a></p>
+    </div>
+
+    <!-- Social Links -->
+    <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-blue-500 hover:scale-105 transform transition-transform duration-300">
+        <h3 class="text-2xl font-semibold text-gray-700">Connect with me:</h3>
+        <ul class="text-lg text-gray-600 space-y-2 mt-2">
+            <li>🔗 <a href="https://www.linkedin.com/in/pranjalsinha02/" target="_blank" class="text-blue-500 hover:underline">LinkedIn</a></li>
+            <li>🐙 <a href="https://github.com/pranjalsinha1965" target="_blank" class="text-gray-700 hover:underline">GitHub</a></li>
+            <li>📜 <a href="https://drive.google.com/file/d/1rI8UBGigdBiUJjhSoDTpp9te_L457WbB/view?usp=sharing" target="_blank" class="text-green-600 hover:underline">Resume</a></li>
+        </ul>
+    </div>
+
 </div>
-{% endblock %} 
+{% endblock %}

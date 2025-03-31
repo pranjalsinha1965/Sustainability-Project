@@ -16,13 +16,22 @@
 <body class="bg-[url('https://greec.in/wp-content/uploads/2024/02/1192276_OSVNZG0-min-981x1024.jpeg')] bg-cover bg-center bg-no-repeat min-h-screen flex flex-col">
     <!-- Navbar -->
     <nav class="sticky top-0 bg-white shadow-md z-50 py-6 px-6 flex justify-between items-center">
-        <a href="/" class="text-2xl font-bold text-teal-600">Sustainability Project</a>
+        <a href="/" class="text-2xl font-bold text-teal-600 flex items-center">
+            <img src="https://media.licdn.com/dms/image/v2/D560BAQGoZ8MWYmzHww/company-logo_200_200/company-logo_200_200/0/1713508658628/greec_in_logo?e=2147483647&v=beta&t=BQyC8nRs1ZWarmJ6MS4My8BBHm4Z3-itDp9SEG6SdzI" 
+                 alt="GREEC Pvt Ltd Logo" 
+                 class="h-12 w-auto mr-3"
+                 onerror="this.style.display='none'">
+            Sustainability Project
+        </a>                  
         <div class="space-x-6 flex items-center">
             <a href="#" class="text-lg font-semibold text-teal-600 hover:text-teal-700">Browse</a>
             {% if request.user.is_authenticated %}
                 <p class="text-sm text-gray-600">Welcome, {{ request.user.username }}</p>
                 <a href="#" class="px-6 py-3 text-lg font-semibold bg-teal-500 text-white rounded-xl hover:bg-teal-700">Inbox</a>
-                <a href="#" class="px-6 py-3 text-lg font-semibold bg-gray-500 text-white rounded-xl hover:bg-gray-700">Dashboard</a>
+                <a href="{% url 'admin:index' %}" class="px-6 py-3 text-lg font-semibold bg-gray-500 text-white rounded-xl hover:bg-gray-700">
+                    Dashboard
+                </a>
+                
                 <ul>
                     <li><a href="{% url 'core:cards' %}" class="px-6 py-3 text-lg font-semibold bg-indigo-500 text-white rounded-xl hover:bg-indigo-700">View Records</a></li>
                 </ul>
