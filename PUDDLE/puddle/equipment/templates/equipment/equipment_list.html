@@ -1,0 +1,21 @@
+<h2>Equipment List</h2>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Quantity</th>
+        <th>Power Rating (W)</th>
+        <th>Daily Usage (hrs)</th>
+        <th>Monthly Consumption (kWh)</th>
+    </tr>
+    {% for item in equipment %}
+    <tr>
+        <td>{{ item.name }}</td>
+        <td>{{ item.type }}</td>
+        <td>{{ item.quantity }}</td>
+        <td>{{ item.power_rating }}</td>
+        <td>{{ item.daily_usage_hours }}</td>
+        <td>{{ item.monthly_consumption }}</td>
+    </tr>
+    {% endfor %}
+</table>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Building List</title>
+</head>
+<body>
+    <h1>Building List</h1>
+
+    <h2>Cooperatives</h2>
+    <ul>
+        {% for cooperative in cooperatives %}
+            <li>{{ cooperative.name }} - Banks: {{ cooperative.number_of_banks }}, Branches: {{ cooperative.number_of_branches }}</li>
+        {% empty %}
+            <li>No cooperatives found.</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Banks</h2>
+    <ul>
+        {% for bank in banks %}
+            <li>{{ bank.name }} - Type: {{ bank.type }}, Branches: {{ bank.number_of_branches }}</li>
+        {% empty %}
+            <li>No banks found.</li>
+        {% endfor %}
+    </ul>
+
+    <h2>ITIs</h2>
+    <ul>
+        {% for iti in itis %}
+            <li>{{ iti.name }} - Target Segments: {{ iti.target_segments }}</li>
+        {% empty %}
+            <li>No ITIs found.</li>
+        {% endfor %}
+    </ul>
+
+    <h2>DISCOMs</h2>
+    <ul>
+        {% for discom in discoms %}
+            <li>{{ discom.name }} - Service Area: {{ discom.service_area }}</li>
+        {% empty %}
+            <li>No DISCOMs found.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

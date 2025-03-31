@@ -1,0 +1,23 @@
+<h2>Certification Results</h2>
+<table>
+    <tr>
+        <th>Building</th>
+        <th>Energy</th>
+        <th>Water</th>
+        <th>Waste Management</th>
+        <th>Building Envelope</th>
+        <th>Other Factors</th>
+        <th>Total Score</th>
+    </tr>
+    {% for factor in factors %}
+    <tr>
+        <td>{{ factor.building }}</td>
+        <td>{{ factor.energy }}</td>
+        <td>{{ factor.water }}</td>
+        <td>{{ factor.waste_management }}</td>
+        <td>{{ factor.building_envelope }}</td>
+        <td>{{ factor.other_factors }}</td>
+        <td>{{ factor.total_score }}</td>
+    </tr>
+    {% endfor %}
+</table>

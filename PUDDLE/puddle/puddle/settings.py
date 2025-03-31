@@ -22,6 +22,8 @@ ALLOWED_HOSTS = []
 
 # Application definition
 INSTALLED_APPS = [
+    'simpleui',
+    # 'django-daisy',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -29,8 +31,23 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core', # my app
-    'import_export',   
+    'building',       # Ensure your apps are added
+    'certification',
+    'equipment',
+    'import_export', 
 ]
+SIMPLEUI_CONFIG = {
+    'system_keep': False,  # Hide the "System" menu
+    'menu_display': ['Users', 'Groups'],  # Show only specific menu items
+    'dynamic': True,  # Enable dynamic menu
+     'system_keep': True,  # Keep the "System" menu (optional)
+    'menu_display': None,  # Show all menus
+    'dynamic': True,  # Enable dynamic menus
+    'home_info': False,  # Remove homepage info
+    'show_sidebar': True,  # Show the sidebar
+    'show_footer': False,  # Hide footer
+}
+
 
 LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/'
