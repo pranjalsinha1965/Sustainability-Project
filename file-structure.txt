@@ -1,0 +1,114 @@
+prerequisites: 
+Learn Django by building and online marketplace : https://www.youtube.com/watch?v=ZxMB6Njs3ck&t=1465s
+create an online crm based application: https://www.youtube.com/watch?v=t10QcFx7d5k&t=1067s
+
+problem statement:
+
+fields:
+SDA Punjab: Name, Designation, Email, Responsibilities
+SDA Haryana: State, Name of officer, Designation, Headquarter, Email-ID, EPBX No.
+Govt. Buildings: Department, Address, Email, Contact, Website
+Division-details (Sheet5): Division Name, DRM Name, Zone Name, Zone Code, No of Division, No of Stations, Headquarters, Address
+Railways-Details (Sheet4): Zone, Division name, name, city, 
+
+DJANGO-CRM  
+│── .dist  
+│── .vscode  
+│── dcrm  
+│── PUDDLE  
+│   ├── puddle  
+│   │   ├── core  
+│   │   │   ├── __pycache__  
+│   │   │   ├── migrations  
+│   │   │   ├── templates  
+│   │   │   ├── __init__.py  
+│   │   │   ├── admin.py  
+│   │   │   ├── apps.py  
+│   │   │   ├── models.py  
+│   │   │   ├── tests.py  
+│   │   │   ├── views.py  
+│   │   ├── puddle  
+│   │   │   ├── __pycache__  
+│   │   │   ├── __init__.py  
+│   │   │   ├── asgi.py  
+│   │   │   ├── settings.py  
+│   │   │   ├── urls.py  
+│   │   │   ├── wsgi.py  
+│   │   ├── db.sqlite3  
+│   │   ├── manage.py  
+│── virt  
+│── website  
+│   ├── __pycache__  
+│   ├── migrations  
+│   ├── static  
+│   ├── templates  
+│   │   ├── add_record.html  
+│   │   ├── base.html  
+│   │   ├── home.html  
+│   │   ├── navbar.html  
+│   │   ├── record.html  
+│   │   ├── register.html  
+│   │   ├── update_record.html  
+│   ├── __init__.py  
+│   ├── admin.py  
+│   ├── apps.py  
+│   ├── forms.py  
+│   ├── models.py  
+│   ├── tests.py  
+│   ├── urls.py  
+│   ├── views.py  
+│── Django-CRM-Database.session.sql  
+│── manage.py  
+│── mydb.py  
+
+
+puddle/
+│── templates/
+│   ├── core/  # Namespaced templates for the "puddle" app
+│   │   ├── base.html               # Common layout for all pages
+│   │   ├── add_sda_punjab.html      # Form for SDA Punjab records
+│   │   ├── add_sda_haryana.html     # Form for SDA Haryana records
+│   │   ├── add_govt_building.html   # Form for Government Buildings
+│   │   ├── add_division_detail.html # Form for Division Details
+│   │   ├── add_railway_detail.html  # Form for Railway Details
+│   │   ├── success.html             # Success message after data entry
+
+Important points: 
+
+Workable data sets for the web development of Django portal implement other features like sign up, login make the dashboard and all along with the graphics 
+Non workable data sets will be done with the help of automated data analytics and all please keep it in dashboard and try to project it using google colab and all
+so from excel sheets itself import data from the excel file 
+
+Develop a checklist specifically for auditing, ensuring that only the necessary equipment is reviewed for that purpose. The web application for the sustainability project should include three main sections. The first section, Green Certification Process, categorizes sustainability factors into five key areas: Energy (25% weightage), Water (consumption & harvesting) (13% weightage), Waste Management (25% weightage), Building Envelope (structure) (25% weightage), and Others (20% weightage). The second section, Equipment Checklist, should function like a telephone directory and include details such as equipment type, quantity, power rating (in watts), daily usage (in hours), and total energy consumption (in kWh/month). The third section, Building Segments, should provide information on cooperatives, the number of banks and branches (for cooperatives), government, private, and international banks with their respective branches, total ITIs, target segments, and a list of DISCOMs. The application can be built using Python, HTML, CSS, and any framework such as Django.
+
+sustainability_audit/
+│── sustainability_project/    # Django project directory
+│   │── __init__.py
+│   │── settings.py            # Main project settings
+│   │── urls.py                # Root URL configuration
+│   │── wsgi.py
+│   │── asgi.py
+│   └── manage.py              # Django CLI manager
+│
+│── audit/                     # Django app for audit-related models and views
+│   │── migrations/            # Database migrations
+│   │── templates/             # HTML templates
+│   │   ├── audit/             
+│   │   │   ├── index.html     # Home page template
+│   │── static/                # Static files (CSS, JS)
+│   │   ├── css/               # CSS stylesheets
+│   │   │   ├── style.css
+│   │── __init__.py
+│   │── admin.py               # Admin panel configurations
+│   │── apps.py
+│   │── models.py              # Database models
+│   │── views.py               # Business logic for rendering pages
+│   │── urls.py                # URL routing for the audit app
+│   └── tests.py               # Unit tests
+│
+│── db.sqlite3                  # SQLite database (can be changed to PostgreSQL)
+│── requirements.txt            # Dependencies list (Django, etc.)
+│── README.md                   # Project documentation
+
+Dashboard.xlsx has 7 sheets namely All Railway Stations, Railway Division Details, NHAI Details, Ports Details, Banks and Airports with a sustainability dashboard and all. Just analyse the datasets inform of xlsx sheets. How to clean the data present in the workbook and preprocess it for preparing a checklist. 
+
