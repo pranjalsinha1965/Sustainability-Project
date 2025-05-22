@@ -1,0 +1,47 @@
+Hello Sir,
+
+I have successfully completed my personal website! Please watch the video in its entirety.
+
+The Sustainability Project is developed to address environmental and social sustainability challenges through technology. It integrates data collection, analysis, and reporting tools to promote sustainable practices. The primary objective is to equip businesses, governments, and communities with data-driven insights to effectively achieve their sustainability goals.
+
+GitHub: https://github.com/pranjalsinha1965/Sustainability-Project.git
+Link: https://drive.google.com/file/d/1u0JDKqII0bqmSViYui2EOKSWDYGeWo03/view?usp=sharing 
+
+🌱 GranularCertOS | Sustainability Project
+By Pranjal Sinha
+GitHub: https://github.com/pranjalsinha1965/Sustainability-Project.git
+Google Drive (Project Reports, Docs, Video): https://drive.google.com/drive/folders/12Lv9R8QevAlhFwzRiC3qvjCcLkRz94eP?usp=sharing
+
+🚀 About the Project
+GranularCertOS (The Sustainability Project) is an initiative to address environmental and social sustainability challenges through tech-driven solutions. The project enables users—be it institutions, governments, or individuals—to input, track, analyze, and visualize sustainability data like energy use, carbon emissions, and waste production.
+
+🛠️ Tech Stack & Frameworks
+Frontend: React.js, HTML5, CSS3
+Backend: Node.js, Express.js, Django 
+Database: MongoDB / MySQL
+Auth: JWT / OAuth
+DevOps: Docker, Docker Compose
+Deployment: AWS (if applicable)
+
+📈 Features
+1. Secure login for personalized dashboards
+2. Input & monitor sustainability metrics
+3. Real-time data visualization and reports
+4. Downloadable analytics
+5. Open-source collaboration enabled
+
+🌍 Why This Matters
+As part of the Green Tech & Sustainable Coding movement by Let’s Code, this project aims to make software not only efficient but eco-conscious. Developers have a responsibility to code with sustainability in mind—and this platform demonstrates just how tech can reduce the carbon footprint.
+
+🤝 Looking for Collaborators
+This project is currently being rebuilt and optimized for scalability and collaboration. If you're a developer, data analyst, designer, or just passionate about climate tech, we need your help!
+
+Submit or collaborate via Let’s Code GitHub Spotlight
+✅ Stay the maintainer
+✅ Get visibility & contributors
+✅ Join a movement toward Green Tech
+
+For more updates, connect with me:
+📧 Email: pranjalsinha1965@gmail.com
+💼 LinkedIn: linkedin.com/in/pranjalsinha02
+🐙 GitHub: pranjalsinha1965
