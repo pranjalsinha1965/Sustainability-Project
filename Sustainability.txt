@@ -1,6 +1,6 @@
 Hello Sir,
 
-I have successfully completed my personal website! Please watch the video in its entirety.
+I have successfully completed my project! Please watch the video in its entirety.
 
 The Sustainability Project is developed to address environmental and social sustainability challenges through technology. It integrates data collection, analysis, and reporting tools to promote sustainable practices. The primary objective is to equip businesses, governments, and communities with data-driven insights to effectively achieve their sustainability goals.
 
@@ -31,7 +31,7 @@ Deployment: AWS (if applicable)
 5. Open-source collaboration enabled
 
 🌍 Why This Matters
-As part of the Green Tech & Sustainable Coding movement by Let’s Code, this project aims to make software not only efficient but eco-conscious. Developers have a responsibility to code with sustainability in mind—and this platform demonstrates just how tech can reduce the carbon footprint.
+As part of the Green Tech & Sustainable Coding movement this project aims to make software not only efficient but eco-conscious. Developers have a responsibility to code with sustainability in mind—and this platform demonstrates just how tech can reduce the carbon footprint.
 
 🤝 Looking for Collaborators
 This project is currently being rebuilt and optimized for scalability and collaboration. If you're a developer, data analyst, designer, or just passionate about climate tech, we need your help!

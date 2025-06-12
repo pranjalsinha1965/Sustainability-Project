@@ -1,0 +1,23 @@
+What is a sustainability dashboard?
+Sustainability dashboards help organizations track (and communicate) their progress towards sustainability goals.
+
+Today, more companies than ever have made commitments to become more sustainable. Many companies have aligned themselves with the UN’s 2030 Sustainable Development Goals, promising to deliver on long term pledges by or before 2030. Others have made efforts to become ESG compliant (ESG stands for Environmental, Social, and Corporate Governance).
+
+As a result, tracking (and communicating) their progress is an important aspect of these initiatives. Many companies find that data dashboards, which visualize key performance metrics are a useful and efficient tool for achieving this.
+
+This dashboard has been created by a university who has set several sustainability goals, to be completed by 2030. With such a wide stakeholder community including students, staff and local organizations, the university needed a simple way to communicate their progress, online.
+
+The dashboard includes two major sections. On the left-hand side, the university has aggregated their 2030 goals into eight major areas. Here, they can show how much progress has been made in each area, as well as progress overall. (Naturally, the dashboard would be accompanied by further materials which outline further details of each target area.)
+
+The remainder of the dashboard breaks down the university’s energy consumption by time and building type. Not only does this help the university to communicate progress they are making in terms of energy consumption, it also helps create awareness about energy usage within the wider university population. This helps people understand how they can contribute to this goal by reducing their own energy consumption.
+
+Focus area
+Sustainability goals, energy consumption
+
+Who looks at it?
+Students, staff, stakeholders
+
+How often?
+Ad hoc
+
+SQL DatabaseGoogle SheetsExcelMixpanel
