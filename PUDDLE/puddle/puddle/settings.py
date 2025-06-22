@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'equipment',
     'import_export', 
 ]
+
 SIMPLEUI_CONFIG = {
     'system_keep': False,  # Hide the "System" menu
     'menu_display': ['Users', 'Groups'],  # Show only specific menu items
@@ -49,11 +50,9 @@ SIMPLEUI_CONFIG = {
     'show_footer': False,  # Hide footer
 }
 
-
 LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
-
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
