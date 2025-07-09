@@ -30,6 +30,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'item', 
+    'conversation',
     'core', # my app
     'building',       # Ensure your apps are added
     'certification',
