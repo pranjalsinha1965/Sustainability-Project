@@ -27,11 +27,10 @@
             <a href="#" class="text-lg font-semibold text-teal-600 hover:text-teal-700">Browse</a>
             {% if request.user.is_authenticated %}
                 <p class="text-sm text-gray-600">Welcome, {{ request.user.username }}</p>
-                <a href="#" class="px-6 py-3 text-lg font-semibold bg-teal-500 text-white rounded-xl hover:bg-teal-700">Inbox</a>
+                <a href="{% url 'conversation:inbox' %}" class="px-6 py-3 text-lg font-semibold bg-teal-500 text-white rounded-xl hover:bg-teal-700">Inbox</a>
                 <a href="{% url 'admin:index' %}" class="px-6 py-3 text-lg font-semibold bg-gray-500 text-white rounded-xl hover:bg-gray-700">
                     Dashboard
                 </a>
-                
                 <ul>
                     <li><a href="{% url 'core:cards' %}" class="px-6 py-3 text-lg font-semibold bg-indigo-500 text-white rounded-xl hover:bg-indigo-700">View Records</a></li>
                 </ul>

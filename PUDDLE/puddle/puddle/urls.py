@@ -23,6 +23,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('', index, name='index'),
+    path('conversation/', include('conversation.urls', namespace='conversation')),
     path('', include('core.urls')),
     path('admin/', admin.site.urls),
     path('add-sda-punjab/', add_sda_punjab, name='add_sda_punjab'),
