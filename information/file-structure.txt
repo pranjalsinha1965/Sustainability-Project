@@ -17,6 +17,13 @@ DJANGO-CRM
 │── dcrm  
 │── PUDDLE  
 │   ├── puddle  
+|   |   |── building 
+|   |   |── Certification
+|   |   |── equipment 
+|   |   |── item 
+|   |   |── media 
+|   |   |── static 
+|   |   |── uploads 
 │   │   ├── core  
 │   │   │   ├── __pycache__  
 │   │   │   ├── migrations  

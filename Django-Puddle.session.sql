@@ -1,1 +1,1 @@
-select * from core_divisiondetail;
+select * from django_session;

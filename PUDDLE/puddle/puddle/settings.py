@@ -93,6 +93,18 @@ DATABASES = {
     }
 }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'greecsustainability',
+#         'USER': 'root',
+#         'PASSWORD': 'jV>:389`orW.',
+#         'HOST': 'localhost',
+#         'PORT': '3306',
+#     }
+# }
+
+
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
     {
