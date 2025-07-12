@@ -119,3 +119,5 @@ sustainability_audit/
 
 Dashboard.xlsx has 7 sheets namely All Railway Stations, Railway Division Details, NHAI Details, Ports Details, Banks and Airports with a sustainability dashboard and all. Just analyse the datasets inform of xlsx sheets. How to clean the data present in the workbook and preprocess it for preparing a checklist. 
 
+this is the real file structure:
+
