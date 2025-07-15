@@ -160,3 +160,24 @@ sustainability_audit/
 
 Dashboard.xlsx has 7 sheets namely All Railway Stations, Railway Division Details, NHAI Details, Ports Details, Banks and Airports with a sustainability dashboard and all. Just analyse the datasets inform of xlsx sheets. How to clean the data present in the workbook and preprocess it for preparing a checklist. 
 
+Not: 
+
+1. Try to start making calculator tool for the website just modify the todo list(as given in the link: https://www.youtube.com/watch?v=amiIcyt-J2A). 
+Please do this think ! Try to build the tool. Start making different section for this part as soon as possible.
+
+2. Frameworks to be used: 
+1. Django 
+2. FastAPI 
+3. React 
+4. MySQL 
+
+Deployment will be on AWS + Docker 
+
+1. Don`t try to shift from the present version only:
+=> Segragate the documents and then try to make them reachable through that website.
+=> Please do these things necessarily
+=>Try to complete the datasets completely 
+=>AWS deplyment 
+=> FAST-API / Granular Cert OS 
+=> Try to segregate and maintain a project report for these activites itself.
+=> Try to use the codes as done in before given tasks.
