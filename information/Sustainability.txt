@@ -174,10 +174,11 @@ Please do this think ! Try to build the tool. Start making different section for
 Deployment will be on AWS + Docker 
 
 1. Don`t try to shift from the present version only:
+
 => Segragate the documents and then try to make them reachable through that website.
 => Please do these things necessarily
 => Try to complete the datasets completely 
-=> AWS deplyment 
+=> AWS deployment : Through Elasticbeanstalk only
 => FAST-API / Granular Cert OS 
 => Try to segregate and maintain a project report for these activites itself.
 => Try to use the codes as done in before given tasks.

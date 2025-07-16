@@ -88,6 +88,8 @@ def add_railway_detail(request):
         form = RailwayDetailForm()
     return render(request, 'core/add_railway_detail.html', {'form': form})
 
+
+
 # SDA Punjab List view
 def sda_punjab_list(request):
     sda_punjab_data = SDAPunjab.objects.all()  # Fetch all data from the SDAPunjab model

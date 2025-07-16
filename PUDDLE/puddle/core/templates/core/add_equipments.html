@@ -1,28 +1,41 @@
 {% extends "core/base.html" %}
-
-{% block title %}Equipment-Details{% endblock %}
+{% block title %}Add Equipment{% endblock %}
 
 {% block content %}
-<div class="max-w-2xl mx-auto bg-white p-6 rouded-lg shadow-md">
-    <h2 class="text-2xl font-semibold text-teal-600 mb-4"> 
-        Add Equipment Details
-    </h2>
-    <form method="POST" action="{% url 'add_equipment_detail' %}" class="apce-y-4">
-        {% csrf_token %}
-        <!-- Name -->
-            <label for="Equipment_name" class="block font-medium">Name</label>
-            <input type="text" id="division_name" name="division_name" class="w-full p-2 border rounded" required>
+<div class="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow-md">
+  <h2 class="text-2xl font-semibold text-blue-600 mb-4">Add Equipment</h2>
 
-            <!-- Category -->
-            <label for="category" class="block font-medium">Category</label>
-            <input type="text" id="drm_name" name="drm_name" class="w-full p-2 border rounded" required>
+  <form method="POST" action="{% url 'add_equipment' %}" class="space-y-4">
+    {% csrf_token %}
 
-            <!-- Purchase Date -->
-            <label for="Purchase_Date" class="block font-medium">Purchase Date</label>
-            <input type="text" id="zone_name" name="zone_name" class="w-full p-2 border rounded" required>
+    <!-- Name -->
+    <div>
+      <label for="id_name" class="block font-medium">Name</label>
+      {{ form.name|as_widget(attrs={'class': 'w-full p-2 border border-gray-300 rounded'}) }}
+    </div>
 
-            <!-- Status -->
-            <label for="Status" class="block font-medium">Status</label>
-            <input type="text" id="zone_code" name="zone_code" class="w-full p-2 border rounded" required>
-    </form>
+    <!-- Category -->
+    <div>
+      <label for="id_category" class="block font-medium">Category</label>
+      {{ form.category|as_widget(attrs={'class': 'w-full p-2 border border-gray-300 rounded'}) }}
+    </div>
+
+    <!-- Purchase Date -->
+    <div>
+      <label for="id_purchase_date" class="block font-medium">Purchase Date</label>
+      {{ form.purchase_date|as_widget(attrs={'class': 'w-full p-2 border border-gray-300 rounded', 'type': 'date'}) }}
+    </div>
+
+    <!-- Status -->
+    <div>
+      <label for="id_status" class="block font-medium">Status</label>
+      {{ form.status|as_widget(attrs={'class': 'w-full p-2 border border-gray-300 rounded'}) }}
+    </div>
+
+    <!-- Submit -->
+    <div>
+      <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Submit</button>
+    </div>
+  </form>
 </div>
+{% endblock %}
