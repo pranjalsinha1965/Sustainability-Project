@@ -27,7 +27,7 @@ def signup(request):
 
 # Index view
 def index(request):
-    return render(request, 'core/newIndex.html')
+    return render(request, 'core/index.html')
 
 # Contact view
 def contact(request):
