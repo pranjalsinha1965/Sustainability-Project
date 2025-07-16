@@ -1,0 +1,29 @@
+Aim: To design architecture of network in AWS for deplployment:
+1. Highly available, highly scalable, and fault-tolerant.
+2. Try to use custom VPC instead of default ones.
+3. Secure and apply best prectices of IAM and security.
+
+Main Principle:
+1. In this architecture, a public-facing Application Load Balancer 
+forwards client traffic to our web tier EC2 instances. 
+2. The web tier is running Nginx webservers that are configured to serve a 
+React.js website and redirects our API calls to the application 
+tier’s internal facing load balancer. 
+3. The internal facing load balancer then forwards that traffic to the application tier, 
+which is written in Node.js. 
+4. The application tier manipulates data in an Aurora MySQL multi-AZ database 
+and returns it to our web tier. 
+5. Load balancing, health checks and autoscaling groups are created at each layer to maintain 
+the availability of this architecture.
+
+Observation:
+Make tables for all the architectures related to networking.
+
+Procedure: 
+Steps 
+1. Access the steps from this link: 
+https://catalog.us-east-1.prod.workshops.aws/workshops/85cd2bb2-7f79-4e96-bdee-8078e469752a/en-US/introduction/getting-started
+
+Architecture-Diagram:
+
+Conclusion: 
