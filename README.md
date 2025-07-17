@@ -42,6 +42,17 @@ The Sustainability Project is designed to address environmental and social susta
 
 4. Open your browser and navigate to http://127.0.0.1:8000/ to view the project locally.
 
+# 2nd Option(containerization using docker and aws)
+
+Just try to follow these commands(using an ubuntu-ec2-instance) :
+```bash
+sudo apt update
+sudo apt install docker-compose-plugin
+sudo usermod -aG docker $USER 
+newgrp docker 
+docker-compose up 
+```
+
 ## How to Use
 
 - **User Login**  : Upon visiting the app, users can sign up or log in to access personalized data and reports.
