@@ -1,0 +1,3 @@
+[submodule "external/granular_registry"]
+	path = external/granular_registry
+	url = https://github.com/Future-Energy-Associates/granular_certificate_registry.git
