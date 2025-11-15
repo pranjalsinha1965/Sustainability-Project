@@ -1,0 +1,51 @@
+DOCKER VOTING APP: Learn the commands 
+
+LAB - 1
+a. Images get stopped using image_id 
+b. Containers running + not running: docker ps -a 
+c. Containers running: docker ps 
+d. Docker for removing all the containers: docker rm $(docker ps -aq)
+
+Note: 
+docker stop $(docker ps aq)
+docker rm $(docker ps -aq)
+
+Usefull commands : 
+Q.1 Run a container with nginx:1.14 - alpine and name it webapp 
+
+1. docker run -d --name webapp nginx:1.14-alpine 
+2. docker rm $(docker images -aq)
+3. docker run -p 38282:8000 kodekloud/simple-webapp-blue
+
+Q.4 How rename docker images ?
+docker build -t webapp-color 
+
+Q.5 Finding base operating system. 
+docker run python:3.6 cat/etx/*release*
+
+Q.6 Tag a docker_image 
+Accesssing Environment of any image:
+A. docker exec -it blue-app env 
+B. docker run -p 38282:8000 --name blue-app -e APP_COLOR_blue -d kodekloud/simple-webapp 
+C. docker run -d -e MYSQL_ROOT_PASSWORD -db_pass123 --name mysql-db mysql 
+D. to env file from within a mysql -db 
+docker exec -it mysql-db env 
+E. cat Dockerfile_mysql | grep ENTRYPOINT 
+
+For finding startup command of running instance of image: 
+
+A. cat Dockerfile [image_name] | grep CMD 
+B. sh get_data.sh } number of users entire in database 
+C. docker run -v/opt/data:/var/lib/mysql -d --name mysql-db -e MYSQL_ROOT_PASSWORD = db_pass123 mysql DOCKER_REGISTRY
+
+DOCKER REGISTRY:
+
+1. DOCKER RUN -D -P 5000:5050 --restart=always --name my_registry registry:2 
+2. docker pull [image_name]
+3. docker image tage localhost port/[image_name]
+4. docker push [image_name]
+5. docker image prune -a 
+
+Note: 
+[image_name]: 
+image_name: tag 
