@@ -18,6 +18,6 @@ dataBase = mysql.connector.connect(
 cursorObject = dataBase.cursor()
 
 # Create a database
-cursorObject.execute("CREATE DATABASE greecustainability")
+cursorObject.execute("CREATE DATABASE greecsustainability")
 
 print("All Done!")

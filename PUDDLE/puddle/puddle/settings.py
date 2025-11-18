@@ -2,7 +2,13 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+from dotenv import load_dotenv
 import os
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+load_dotenv(BASE_DIR / ".env")
+
 import sys
 
 MEDIA_URL = '/media/'
@@ -94,15 +100,15 @@ DATABASES = {
     }
 }
 
+# This retrieves our new db connection credentials from MySQL
+
 # DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'greecsustainability',
-#         'USER': 'root',
-#         'PASSWORD': 'jV>:389`orW.',
-#         'HOST': 'localhost',
-#         'PORT': '3306',
-#     }
+#     'default': 'django.db.backends.mysql', 
+#     'NAME': os.getenv('DB_NAME'), 
+#     'USER': os.getenv('DB_USER'), 
+#     'PASSWORD': os.getenv('DB_PASSWORD'), 
+#     'HOST': os.getenv('DB_HOST'), 
+#     'PORT': os.getenv('DB_PORT'), 
 # }
 
 
@@ -134,3 +140,4 @@ STATICFILES_DIRS = [BASE_DIR / 'static']  # Global static files directory
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
