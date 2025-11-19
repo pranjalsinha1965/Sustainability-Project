@@ -1,66 +1,34 @@
 from pathlib import Path
+import pymysql
+pymysql.install_as_MySQLdb()
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-from dotenv import load_dotenv
-import os
-
-BASE_DIR = Path(__file__).resolve().parent.parent
-
-load_dotenv(BASE_DIR / ".env")
-
-import sys
-
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
+# See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-(2f&p(y8yd_cxcm@tph#*pt9o2mhn+e%4d%*2_#iqq38avmy5p'
+SECRET_KEY = 'django-insecure-jcxge@8cwms-4-$&qia^6p+^8-qwrsw7vey#0e6e326apg3mvo'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 
 # Application definition
+
 INSTALLED_APPS = [
-    'simpleui',
-    # 'django-daisy',
-    'widget_tweaks',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'item', 
-    'conversation',
-    'core', # my app
-    'building',       # Ensure your apps are added
-    'certification',
-    'equipment',
-    'import_export', 
+    'website',
 ]
-
-SIMPLEUI_CONFIG = {
-    'system_keep': False,  # Hide the "System" menu
-    'menu_display': ['Users', 'Groups'],  # Show only specific menu items
-    'dynamic': True,  # Enable dynamic menu
-     'system_keep': True,  # Keep the "System" menu (optional)
-    'menu_display': None,  # Show all menus
-    'dynamic': True,  # Enable dynamic menus
-    'home_info': False,  # Remove homepage info
-    'show_sidebar': True,  # Show the sidebar
-    'show_footer': False,  # Hide footer
-}
-
-LOGIN_URL = '/login/'
-LOGIN_REDIRECT_URL = '/'
-LOGOUT_REDIRECT_URL = '/'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -72,13 +40,13 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'puddle.urls'
+ROOT_URLCONF = 'dcrm.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'core' / 'templates'],  # Global templates directory
-        'APP_DIRS': True,  # Look for templates in app directories
+        'DIRS': [],
+        'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -90,31 +58,34 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'puddle.wsgi.application'
+WSGI_APPLICATION = 'dcrm.wsgi.application'
+
 
 # Database
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
-# This retrieves our new db connection credentials from MySQL
+# https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 # DATABASES = {
 #     'default': {
-#     'ENGINE': 'django.db.backends.mysql', 
-#     'NAME': os.getenv('DB_NAME'), 
-#     'USER': os.getenv('DB_USER'), 
-#     'PASSWORD': os.getenv('DB_PASSWORD'), 
-#     'HOST': os.getenv('DB_HOST'), 
-#     'PORT': os.getenv('DB_PORT'), 
+#         'ENGINE':'django.db.backends.mysql',  
+#         'NAME': BASE_DIR/'db.sqlite3'
 #     }
 # }
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'elderco',
+        'USER': 'root',
+        'PASSWORD': 'jV>:389`orW.',
+        'HOST': 'localhost',
+        'PORT': '3306',
+    }
+}
+
 
 # Password validation
+# https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
+
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -130,16 +101,25 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+
 # Internationalization
+# https://docs.djangoproject.com/en/4.1/topics/i18n/
+
 LANGUAGE_CODE = 'en-us'
+
 TIME_ZONE = 'UTC'
+
 USE_I18N = True
+
 USE_TZ = True
 
+
 # Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/4.1/howto/static-files/
+
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [BASE_DIR / 'static']  # Global static files directory
 
 # Default primary key field type
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
