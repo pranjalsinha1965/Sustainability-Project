@@ -1,4 +1,6 @@
 from pathlib import Path
+import pymysql
+pymysql.install_as_MySQLdb()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -23,7 +25,7 @@ SECRET_KEY = 'django-insecure-(2f&p(y8yd_cxcm@tph#*pt9o2mhn+e%4d%*2_#iqq38avmy5p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -100,6 +102,18 @@ DATABASES = {
     }
 }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql', 
+#         'NAME': 'greecsustainability', 
+#         'USER': 'root', 
+#         'PASSWORD': 'jV>:389`orW.', 
+#         'HOST': 'localhost', 
+#         'PORT': '3306'
+#     }
+# }
+
+
 # This retrieves our new db connection credentials from MySQL
 
 # DATABASES = {
@@ -132,8 +146,11 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 LANGUAGE_CODE = 'en-us'
+
 TIME_ZONE = 'UTC'
+
 USE_I18N = True
+
 USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
